@@ -9,7 +9,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess || 0>guess|| guess>20) {
     document.querySelector('.message').textContent = 'Choose a Number between 1 and 20';
   } else if (guess === secretnum) {
-    document.querySelector('.message').textContent = 'Ya got it right!';
+    document.querySelector('.message').textContent = 'Ya got it!';
     document.querySelector('.number').textContent = secretnum;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
@@ -21,11 +21,11 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess != secretnum) {
     if (score > 1) {
       document.querySelector('.message').textContent =
-        guess > secretnum ? 'Tis High Oopsies!' : 'Raise Your Number Bestie ';
+        guess > secretnum ? 'Tis High!' : 'Raise the Number  ';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = 'Next Time Gertrude';
+      document.querySelector('.message').textContent = 'Next Time Gertrude!';
       document.querySelector('.score').textContent = 0;
     }
   }
